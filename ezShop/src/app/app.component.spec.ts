@@ -20,16 +20,29 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ezShop'`, () => {
+  it(`should have as title 'ezShop : le meilleur du shop'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('ezShop');
+    expect(app.title).toEqual('ezShop : le meilleur du shop');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to ezShop!');
+    expect(compiled.querySelector('h1').textContent).toContain('Bienvenue chez ezShop : le meilleur du shop');
+  });
+
+  it(`should have as message 'Reprenez vos habitudes shopping en main'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.message).toEqual('Reprenez vos habitudes shopping en main');
+  });
+
+  it('should render title in a h1 tag', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h2').textContent).toContain('Reprenez vos habitudes shopping en main');
   });
 });
