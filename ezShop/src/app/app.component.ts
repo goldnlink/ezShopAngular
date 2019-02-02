@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'ezShop';
+  title = 'ezShop : le meilleur du shop';
+  message = 'Reprenez vos habitudes shopping en main';
 }
