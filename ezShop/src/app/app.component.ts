@@ -8,4 +8,22 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ezShop : le meilleur du shop';
   message = 'Reprenez vos habitudes shopping en main';
+  image = 'https://angular.io/assets/images/logos/angular/logo-nav@2x.png';
+  public compteur: number;
+
+  constructor() {
+    this.compteur = 0;
+  }
+
+  Reset() {
+    this.compteur = 0;
+  }
+
+  AjouterUn() {
+    this.compteur = +(this.compteur + 1) || 1;
+  }
+
+  EnleverUn() {
+    this.compteur = +(this.compteur - 1) || -1;
+  }
 }
