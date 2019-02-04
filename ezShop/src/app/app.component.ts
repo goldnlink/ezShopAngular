@@ -9,19 +9,21 @@ export class AppComponent {
   title = 'ezShop : le meilleur du shop';
   message = 'Reprenez vos habitudes shopping en main';
   image = 'https://angular.io/assets/images/logos/angular/logo-nav@2x.png';
-  compteur = 0;
+  public compteur: number;
+
+  constructor() {
+    this.compteur = 0;
+  }
 
   Reset() {
     this.compteur = 0;
-    this.AfficherCompteur();
   }
 
   AjouterUn() {
-    this.compteur++;
-    this.AfficherCompteur();
+    this.compteur = +(this.compteur + 1) || 1;
   }
 
-  AfficherCompteur() {
-    console.log(`Compteur a la valeur ${this.compteur}`);
+  EnleverUn() {
+    this.compteur = +(this.compteur - 1) || -1;
   }
 }

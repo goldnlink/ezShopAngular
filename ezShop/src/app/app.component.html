@@ -11,8 +11,9 @@
   <br />
   <p>La valeur de compteur est : {{compteur}}</p>
   <br />
-  <button (click)="AjouterUn()">Ajouter 1</button>
-  <button (click)="Reset()">Remise à zéro</button>
+  <button (click)="AjouterUn()">+</button>
+  <button (click)="EnleverUn()">-</button>
+  <button (dblclick)="Reset()">Remise à zéro</button>
 </div>
 
 <router-outlet></router-outlet>
