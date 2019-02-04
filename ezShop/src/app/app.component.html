@@ -9,7 +9,7 @@
   <br />
   <input [(ngModel)]="compteur">
   <br />
-  <p>La valeur de compteur est : {{compteur}}</p>
+  <p *ngIf="compteur > 0">La valeur de compteur est : {{compteur}}</p>
   <br />
   <button (click)="AjouterUn()">+</button>
   <button (click)="EnleverUn()">-</button>
