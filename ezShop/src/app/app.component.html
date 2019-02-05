@@ -17,24 +17,8 @@
         <th>Genre</th>
         <th>Commentaire</th>
       </thead>
-      <tr *ngFor="let personne of personnes">
-        <td>{{personne.ID}}</td>
-        <td>{{personne.Nom}}</td>
-        <td>{{personne.Prenom}}</td>
-        <td><input [(ngModel)]="personne.Age"></td>
-        <td>
-          <span [ngSwitch]="personne.Genre">
-              <span *ngSwitchCase="'M'">Homme</span>
-              <span *ngSwitchCase="'F'">Femme</span>
-              <span *ngSwitchDefault>***</span>
-            </span>
-        </td>
-        <td align="left">
-          <span *ngIf="personne.Age > 65">A la retraite!</span>
-          <span *ngIf="personne.Age > 30 && personne.Age < 65">Au boulot!</span>
-          <span *ngIf="personne.Age <= 30">Ah... la jeunesse...</span>
-        </td>
-      </tr>
+      <app-details-personne *ngFor="let personne of personnes" [personne]=personne>
+      </app-details-personne>
     </table>
   </div>
 </div>
