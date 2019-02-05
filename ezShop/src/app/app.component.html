@@ -2,18 +2,6 @@
   <h1>
     Bienvenue chez {{ title }}!
   </h1>
-  <h2>
-    {{ message }}
-  </h2>
-  <img [src]="image" />
-  <br />
-  <input [(ngModel)]="compteur">
-  <br />
-  <p *ngIf="compteur > 0">La valeur de compteur est : {{compteur}}</p>
-  <br />
-  <button (click)="AjouterUn()">+</button>
-  <button (click)="EnleverUn()">-</button>
-  <button (dblclick)="Reset()">Remise à zéro</button>
 </div>
 
 <router-outlet></router-outlet>
