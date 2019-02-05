@@ -6,14 +6,37 @@
     {{ message }}
   </h2>
   <img [src]="image" />
-  <br />
-  <input [(ngModel)]="compteur">
-  <br />
-  <p *ngIf="compteur > 0">La valeur de compteur est : {{compteur}}</p>
-  <br />
-  <button (click)="AjouterUn()">+</button>
-  <button (click)="EnleverUn()">-</button>
-  <button (dblclick)="Reset()">Remise à zéro</button>
+  <br /><br />
+  <div align="center">
+    <table>
+      <thead>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Age</th>
+        <th>Genre</th>
+        <th>Commentaire</th>
+      </thead>
+      <tr *ngFor="let personne of personnes">
+        <td>{{personne.ID}}</td>
+        <td>{{personne.Nom}}</td>
+        <td>{{personne.Prenom}}</td>
+        <td><input [(ngModel)]="personne.Age"></td>
+        <td>
+          <span [ngSwitch]="personne.Genre">
+              <span *ngSwitchCase="'M'">Homme</span>
+              <span *ngSwitchCase="'F'">Femme</span>
+              <span *ngSwitchDefault>***</span>
+            </span>
+        </td>
+        <td align="left">
+          <span *ngIf="personne.Age > 65">A la retraite!</span>
+          <span *ngIf="personne.Age > 30 && personne.Age < 65">Au boulot!</span>
+          <span *ngIf="personne.Age <= 30">Ah... la jeunesse...</span>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
