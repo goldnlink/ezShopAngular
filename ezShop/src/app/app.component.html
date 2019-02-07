@@ -1,25 +1,7 @@
 <div style="text-align:center">
-  <h1>
-    Bienvenue chez {{ title }}!
-  </h1>
-  <h2>
-    {{ message }}
-  </h2>
-  <img [src]="image" />
-  <br /><br />
   <div align="center">
-    <table>
-      <thead>
-        <th>ID</th>
-        <th>Nom</th>
-        <th>Prenom</th>
-        <th>Age</th>
-        <th>Genre</th>
-        <th>Commentaire</th>
-      </thead>
-      <app-details-personne *ngFor="let personne of personnes" [personne]=personne>
-      </app-details-personne>
-    </table>
+    <app-details-personne *ngFor="let personne of personnes" [personne]="personne">
+    </app-details-personne>
   </div>
 </div>
 
