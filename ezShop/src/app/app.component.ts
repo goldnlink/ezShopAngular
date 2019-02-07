@@ -20,12 +20,12 @@ export class AppComponent {
   }
 
   AjouterUn() {
-    this.compteur = +(this.compteur);
+    this.compteur = +(this.compteur) || 0;
     this.compteur++;
   }
 
   EnleverUn() {
-    this.compteur = +(this.compteur);
+    this.compteur = +(this.compteur) || 0;
     this.compteur--;
   }
 }
