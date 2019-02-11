@@ -1,8 +1,20 @@
-<div style="text-align:center">
-  <div align="center">
-    <app-details-personne *ngFor="let personne of personnes" [personne]="personne">
-    </app-details-personne>
+<div class="row">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark col-lg-12 fixed-top">
+    <a class="navbar-brand" href="#">{{title}}</a>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+      <a class="nav-item nav-link" routerLink="/bestDeals" routerLinkActive="active">Les meilleurs deals</a>
+      <a class="nav-item nav-link" routerLink="/contactUs" routerLinkActive="active">Contactez-nous</a>
+    </div>
+  </nav>
+  <div class="jumbotron text-center col-lg-12">
+    <h1>{{title}}</h1>
+    <p>{{message}}</p>
+  </div>
+  <div class="col-lg-3 col-sm-4">Catégories
+    <a routerLink="contactUs">Contactez nous</a>
+  </div>
+  <div class="col-lg-9 col-sm-8">
+    <router-outlet></router-outlet>
   </div>
 </div>
-
-<router-outlet></router-outlet>
