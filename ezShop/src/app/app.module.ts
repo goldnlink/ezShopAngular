@@ -8,18 +8,21 @@ import { FormsModule } from '@angular/forms';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 import { BestDealsComponent } from './best-deals/best-deals.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { CardProduitComponent } from './card-produit/card-produit.component';
 @NgModule({
   declarations: [
     AppComponent,
     ContactUsComponent,
     HomeComponent,
-    BestDealsComponent
+    BestDealsComponent,
+    CardProduitComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

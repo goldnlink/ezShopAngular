@@ -1,8 +1,4 @@
-<p>
-  best-deals works!
-</p>
 <div class="row">
-  <div class="col-md-4">objet 1</div>
-  <div class="col-md-4">objet 2</div>
-  <div class="col-md-4">objet 3</div>
+  <app-card-produit *ngFor="let produit of listeProduits" [produit]="produit" class="card col col-lg-4 offset-lg-1 mb-4"></app-card-produit>
 </div>
+  
