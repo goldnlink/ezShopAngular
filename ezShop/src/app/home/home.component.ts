@@ -21,14 +21,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.categoryService.selectedCategory.subscribe(categoryId => {
       this.categoryId = categoryId;
-      this.produitService.getProduits().subscribe(result => {
-        if (this.categoryId) {
-          this.listeProduits = result.filter(produit => produit.categoryId === this.categoryId);
-        } else {
-          this.listeProduits = result;
-        }
-      });
+      this.refreshListe();
     });
+    this.refreshListe();
+  }
+
+  refreshListe() {
     this.produitService.getProduits().subscribe(result => {
       if (this.categoryId) {
         this.listeProduits = result.filter(produit => produit.categoryId === this.categoryId);
