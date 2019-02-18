@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Produit } from '../model/produit';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,10 +14,10 @@ export class ProduitsService {
    }
 
   getProduits() {
-    return this.httpClient.get<Produit[]>('http://localhost:63893/api/products', {headers: this.headers});
+    return this.httpClient.get<Produit[]>(environment.urlApi + 'products', {headers: this.headers});
   }
 
   getBestDeals() {
-    return this.httpClient.get<Produit[]>('http://localhost:63893/api/products/bestdeals', {headers: this.headers});
+    return this.httpClient.get<Produit[]>(environment.urlApi + 'products/bestdeals', {headers: this.headers});
   }
 }

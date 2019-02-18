@@ -10,13 +10,15 @@ import { HomeComponent } from './home/home.component';
 import { BestDealsComponent } from './best-deals/best-deals.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardProduitComponent } from './card-produit/card-produit.component';
+import { CategoriesComponent } from './categories/categories.component';
 @NgModule({
   declarations: [
     AppComponent,
     ContactUsComponent,
     HomeComponent,
     BestDealsComponent,
-    CardProduitComponent
+    CardProduitComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
