@@ -1,3 +1,8 @@
 <div class="row">
-  <app-card-produit *ngFor="let produit of listeProduits" [produit]="produit" class="card col col-lg-4 offset-lg-1 mb-4"></app-card-produit>
+  <app-card-produit 
+    *ngFor="let produit of listeProduits"
+    [produit]="produit"
+    class="card col col-lg-4 offset-lg-1 mb-4"
+    (selectDetail)="onSelectDetail($event)">
+  </app-card-produit>
 </div>

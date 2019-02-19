@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.categoryId = categoryId;
       this.refreshListe();
     });
-    this.refreshListe();
   }
 
   refreshListe() {
@@ -38,5 +37,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   getDetails(produit: Produit) {
     console.log('going to page produits/' + produit.id);
+  }
+
+  onSelectDetail(produitID: number) {
+    console.log('ID de produit reçu : ', produitID);
   }
 }
