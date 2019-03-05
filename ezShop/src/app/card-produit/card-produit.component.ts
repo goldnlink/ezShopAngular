@@ -15,6 +15,10 @@ export class CardProduitComponent implements OnInit {
   }
 
   getDetails(produit: Produit) {
+    console.log('Recuperation des details du produit ', produit.id);
+  }
+
+  ajouterProduit(produit: Produit) {
     this.addProduct.emit(produit);
   }
 
