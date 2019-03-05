@@ -1,3 +1,5 @@
+import { Commentaire } from './commentaire';
+
 export class Produit {
     constructor(public id: number,
                 public code: string,
@@ -7,5 +9,6 @@ export class Produit {
                 public quantity: number,
                 public categoryId: number,
                 public imageSrc: string,
-                public bestDeal: boolean) {}
+                public bestDeal: boolean,
+                public comments: Commentaire[]) {}
 }

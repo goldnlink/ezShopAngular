@@ -13,6 +13,8 @@ import { CardProduitComponent } from './card-produit/card-produit.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { DetailsProduitComponent } from './details-produit/details-produit.component';
 import { PanierComponent } from './panier/panier.component';
+import { CommentairesComponent } from './commentaires/commentaires.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { PanierComponent } from './panier/panier.component';
     CardProduitComponent,
     CategoriesComponent,
     DetailsProduitComponent,
-    PanierComponent
+    PanierComponent,
+    CommentairesComponent
   ],
   imports: [
     BrowserModule,
