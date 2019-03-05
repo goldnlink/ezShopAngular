@@ -1,3 +1,14 @@
-<p>
-  details-produit works!
-</p>
+<div *ngIf="produit" class="row">
+  <h1 class="col-lg-12 text-center">{{produit.label}}</h1>
+  <div class="align-items-center flex-wrap col-lg-12 mb-4">
+    <img class="img-fluid rounded col-lg-6 mw-50 mh-50 img-responsive" *ngIf="produit.imageSrc" [src]="produit.imageSrc" />
+    <span class="col-lg-6 align-middle ">{{produit.description}}</span>
+</div>
+  <span *ngIf="produit.bestDeal" class="badge badge-pill badge-primary">Meilleur deal</span>
+  <span class="text-center col-lg-12">
+    <h2>€ {{produit.price}}</h2>
+    <button (click)="ajouterProduit(produit)" class="btn btn-outline-primary">
+      Ajouter au panier
+    </button>
+  </span>
+</div>

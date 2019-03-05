@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Produit } from '../model/produit';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-card-produit',
@@ -8,18 +9,12 @@ import { Produit } from '../model/produit';
 })
 export class CardProduitComponent implements OnInit {
   @Input() produit: Produit;
-  @Output() addProduct = new EventEmitter<Produit>();
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit() {
   }
 
-  getDetails(produit: Produit) {
-    console.log('Recuperation des details du produit ', produit.id);
-  }
-
   ajouterProduit(produit: Produit) {
-    this.addProduct.emit(produit);
+    this.cartService.ajouterUnProduit(produit);
   }
-
 }

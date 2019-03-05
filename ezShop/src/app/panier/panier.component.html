@@ -1,0 +1,12 @@
+<div *ngIf="listeProduits && listeProduits.length > 0">
+  Voici les produits dans votre panier:
+  <div *ngFor="let produit of listeProduits">
+    <h4>{{produit.label}}</h4>
+    <p>Price : € {{produit.price}}</p>
+    <button (click)="enleverProduit(produit)">Retirer ce produit</button>
+  </div>
+  <div>
+    Prix total : € {{prixTotal}}
+  </div>
+</div>
+<div *ngIf="!listeProduits || listeProduits.length === 0">Le panier est vide</div>

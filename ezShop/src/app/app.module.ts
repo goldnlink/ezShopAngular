@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardProduitComponent } from './card-produit/card-produit.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { DetailsProduitComponent } from './details-produit/details-produit.component';
+import { PanierComponent } from './panier/panier.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { DetailsProduitComponent } from './details-produit/details-produit.compo
     BestDealsComponent,
     CardProduitComponent,
     CategoriesComponent,
-    DetailsProduitComponent
+    DetailsProduitComponent,
+    PanierComponent
   ],
   imports: [
     BrowserModule,

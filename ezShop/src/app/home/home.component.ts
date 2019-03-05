@@ -33,8 +33,4 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
     });
   }
-
-  onSelectDetail(produit: Produit) {
-    console.log('adding product to cart : ', produit.id);
-  }
 }
