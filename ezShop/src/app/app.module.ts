@@ -11,6 +11,7 @@ import { BestDealsComponent } from './best-deals/best-deals.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardProduitComponent } from './card-produit/card-produit.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { DetailsProduitComponent } from './details-produit/details-produit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { CategoriesComponent } from './categories/categories.component';
     HomeComponent,
     BestDealsComponent,
     CardProduitComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    DetailsProduitComponent
   ],
   imports: [
     BrowserModule,

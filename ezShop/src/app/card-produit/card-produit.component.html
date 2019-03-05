@@ -5,7 +5,7 @@
     <h2>{{produit.label}}</h2>
     <span *ngIf="produit.bestDeal" class="badge badge-pill badge-primary">Meilleur deal</span>
     <br>
-    <p class="card-text">{{produit.description}}</p>
+    <p class="card-text">{{produit.description | slice:0:100 }}<span *ngIf="produit.description.length > 100">...</span></p>
     <h2>€ {{produit.price}}</h2>
   </div>
 </button>
