@@ -1,0 +1,6 @@
+<ul class="list-group">
+  <li class="list-group-item" [ngClass]="{'active': !selectedCategory}"><button (click)="resetCategory()" class="btn">Toutes les catégories</button></li>
+  <li *ngFor="let category of categories" class="list-group-item" [ngClass]="{'active': selectedCategory === category.id}">
+    <button (click)="setCategory(category.id)" class="btn">{{category.label}}</button>
+  </li>
+</ul>
