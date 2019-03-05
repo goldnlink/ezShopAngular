@@ -8,14 +8,14 @@ import { Produit } from '../model/produit';
 })
 export class CardProduitComponent implements OnInit {
   @Input() produit: Produit;
-  @Output() selectDetail = new EventEmitter<number>();
+  @Output() selectDetail = new EventEmitter<Produit>();
   constructor() { }
 
   ngOnInit() {
   }
 
   getDetails(produit: Produit) {
-    this.selectDetail.emit(produit.id);
+    this.selectDetail.emit(produit);
   }
 
 }

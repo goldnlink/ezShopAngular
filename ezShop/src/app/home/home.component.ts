@@ -1,7 +1,6 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Produit } from '../model/produit';
 import { ProduitsService } from '../services/produits.service';
-import { ActivatedRoute } from '@angular/router';
 import { CategoryService } from '../services/category.service';
 @Component({
   selector: 'app-home',
@@ -35,11 +34,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
-  getDetails(produit: Produit) {
-    console.log('going to page produits/' + produit.id);
-  }
-
-  onSelectDetail(produitID: number) {
-    console.log('ID de produit reçu : ', produitID);
+  onSelectDetail(produit: Produit) {
+    console.log('ID de produit reçu : ', produit.id);
   }
 }
