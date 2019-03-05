@@ -1,4 +1,4 @@
-<button (click)="getDetails(produit)" class="btn">
+<div [routerLink]="['/details', produit.id]" >
   <img class="img-fluid rounded card-img-top" *ngIf="produit.imageSrc" [src]="produit.imageSrc" />
   <img *ngIf="!produit.imageSrc" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/No_image_3x4.svg/1024px-No_image_3x4.svg.png" />
   <div class="card-body">
@@ -8,7 +8,7 @@
     <p class="card-text">{{produit.description | slice:0:100 }}<span *ngIf="produit.description.length > 100">...</span></p>
     <h2>€ {{produit.price}}</h2>
   </div>
-</button>
+</div>
 <button (click)="ajouterProduit(produit)" class="btn btn-outline-primary">
   Ajouter au panier
 </button>
