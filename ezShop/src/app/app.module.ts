@@ -14,6 +14,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { DetailsProduitComponent } from './details-produit/details-produit.component';
 import { PanierComponent } from './panier/panier.component';
 import { CommentairesComponent } from './commentaires/commentaires.component';
+import { TurcMuchPipe } from './turc-much.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CommentairesComponent } from './commentaires/commentaires.component';
     CategoriesComponent,
     DetailsProduitComponent,
     PanierComponent,
-    CommentairesComponent
+    CommentairesComponent,
+    TurcMuchPipe
   ],
   imports: [
     BrowserModule,
